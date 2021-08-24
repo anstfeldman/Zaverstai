@@ -1,569 +1,142 @@
-:root {
-    --rose: #AE7C78;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-
-}
-
-.container {
-    width: 1200px;
-    margin-left: 120px;
-    margin-right: 120px;
-}
-
-
-
-nav {
-    width: 100%;
-    border-top: 1px solid var(--rose);
-    border-bottom: 1px solid var(--rose);
-    margin-top: 26px;
-}
-
-ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 120px;
-    margin-left: 120px;
-}
-
-.nav__item {
-    list-style: none;
+body {
+    background-color: #ffffff;
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 20px;
-    text-align: center;
-    color: var(--rose);
-    margin-top: 16px;
-    margin-bottom: 16.8px;
+    color: #AE7C78;
 }
 
-.promo {
-    margin-top: 80px;
-
-}
-
-.promo__main {
-    display: flex;
-}
-
-.promo__wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 384px;
-    margin-right: 23px;
-}
-
-.promo__header {
+.section_header {
     font-family: Playfair Display;
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.02em;
+    color: #AE7C78;
+}
+.header__nav {
+    list-style: none;
+}
+.promo__header {
+    font-family: Playfair Display;
     font-size: 44px;
     line-height: 59px;
-    color: var(--rose);
 }
 
 .promo__header span {
     font-style: italic;
 }
 
-.promo__subheader {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
+.promo__subheader,
+.news__descr {
     font-size: 24px;
     line-height: 29px;
-    color: var(--rose);
-    margin-top: 24px;
+    font-weight: normal;
 }
 
-.promo__btn {
-    width: 285px;
-    height: 80px;
-    background: #D89999;
-    border-radius: 40px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
+.promo__btn,
+.popular__slide-btn {
+    background-color: #AE7C78;
     color: #FFFFFF;
-    margin-top: 64px;
-    border: none;
-}
-
-.promo__img-wrapper-1 {
-    margin-right: 20px;
-    margin-top: 59px;
-}
-
-.promo__img-wrapper-2 {
-    margin-top: 1px;
-}
-
-.promo__adv {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 48px;
-}
-
-.promo__adv_item {
-    display: flex;
-}
-
-.promo__adv_text {
-    width: 285px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
-    color: var(--rose);
-    margin-left: 20px;
-
 }
 
 .promo__adv_header {
     font-weight: 500;
-    margin-bottom: 8px;
 }
 
-.popular {
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.popular__header {
-    font-family: Playfair Display;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 48px;
-    letter-spacing: 0.02em;
-    color: var(--rose);
-    text-align: center;
-
-}
-
-.popular__card-wrapper {
-    width: 387px;
-    margin-right: 20px;
-
-}
-
-.popular__card-header {
-    font-family: Montserrat;
-    font-style: normal;
+.popular__slide-header,
+.popular__slide-price {
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
-    color: var(--rose);
-    margin-top: 27px;
-}
-
-.popular__card-descr,
-.popular__card-size {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
-    color: var(--rose);
-}
-
-.popular__card-descr {
-    margin-top: 20px;
-}
-
-.popular__card-size,
-.popular__card-price {
-    margin-top: 24px;
-}
-
-.popular__card-price {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 29px;
-    color: var(--rose);
-
-}
-
-.popular__card-btn {
-    width: 285px;
-    height: 80px;
-    background: #D89999;
-    border-radius: 40px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
-    color: #FFFFFF;
-    margin-top: 64px;
-    border: none;
-}
-
-.popular__card {
-    display: flex;
-    margin-top: 36px;
-}
-
-.popular__card-arrows {
-    margin-top: 24px;
-}
-
-.popular__card-arrleft {
-    margin-right: 20px;
-}
-
-.catalogue {
-    margin-top: 80px;
-    display: flex;
-    justify-content: space-between;
 }
 
 .catalogue__card {
-    position: relative;
-    text-align: center;
+    background-color: rgba(174, 124, 120, 0.6);
+    /*temporary*/
+}
+
+.catalogue__card a {
+    text-decoration: none;
 }
 
 .catalogue__card-header {
-    position: absolute;
-    top: 183px;
     font-family: Playfair Display;
-    font-style: normal;
     font-weight: bold;
     font-size: 36px;
     line-height: 48px;
-    text-align: center;
     letter-spacing: 0.02em;
     color: #FFFFFF;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
+
 }
 
 .catalogue__card-descr {
-    position: absolute;
-    top: 239px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
     color: #FFFFFF;
-
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-}
-
-.catalogue__card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 442px;
-    background: rgba(174, 124, 120, 0.6);
-    border-radius: 10px;
 }
 
 .discount {
-    background: var(--rose);
-    display: flex;
-    justify-content: space-between;
-    margin-top: 80px;
-}
-
-.discount__text {
-    margin-left: 102px;
-    margin-right: 20px;
+    background-color: #AE7C78;
 }
 
 .discount__header {
     font-family: Playfair Display;
-    font-style: normal;
     font-weight: normal;
     font-size: 44px;
     line-height: 59px;
     letter-spacing: 0.02em;
-    color: #FFFFFF;
-    margin-top: 40px;
-    width: 488px;
+    color: #FFFFFF
 }
 
 .discount__descr {
-    width: 387px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
+    /*font-weight: normal;*/
     font-size: 24px;
     line-height: 29px;
     color: #FFFFFF;
-    margin-top: 24px;
-}
-
-.feature {
-    margin-top: 80px;
-}
-
-.feature__header {
-    font-family: Playfair Display;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 48px;
-    letter-spacing: 0.02em;
-    color: var(--rose);
-    text-align: center;
-}
-
-.feature__wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 36px;
 }
 
 .feature__item-header {
-    font-family: Montserrat;
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 20px;
-    color: var(--rose);
-    text-align: center;
-    margin-top: 8px;
-
 }
 
 .feature__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.feature__item-descr {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    color: var(--rose);
-    margin-top: 8px;
-}
-
-.news {
-    margin-top: 80px;
-    display: flex;
-}
-
-.news__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.news__header {
-    font-family: Playfair Display;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 48px;
-    letter-spacing: 0.02em;
-    color: var(--rose);
-}
-
-.news__descr {
-    margin-top: 40px;
-    width: 387px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 29px;
-    color: var(--rose);
-}
-
-.news__social {
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-between;
-    width: 96.76px;
     list-style: none;
 }
-
-.news__images {
-    width: 692px;
-    display: grid;
-    grid-template-columns: 285px 387px;
-    column-gap: 20px;
-    ;
-    grid-template-rows: 220px 220px;
-    row-gap: 20px;
+.news__social li {
+    list-style: none;
 }
-
-.reviews {
-    margin-top: 80px;
-    border: 1px solid var(--rose);
-    padding: 40px 44px 64px 44px;
-
-}
-
-.reviews__header {
-    font-family: Playfair Display;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 48px;
-    text-align: center;
-    letter-spacing: 0.02em;
-    color: var(--rose);
-}
-
-.reviews__wrapper {
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.reviews__text {
-    width: 300px;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    color: var(--rose);
-    margin-top: 40px;
-}
-
 .reviews__name {
-    font-family: Montserrat;
-    font-style: normal;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    color: var(--rose);
-    text-align: center;
-    margin-top: 16px;
-}
-
-.map {
-    margin-top: 80px;
-    position: relative;
-}
-
-.map img {
-    width: 100%;
-}
-
-.map__card {
-    position: absolute;
-    width: 386px;
-    height: 520px;
-    left: 222px;
-    top: 52px;
-    background: #F7FAFC;
-    box-shadow: 0px 4px 40px rgba(217, 217, 217, 0.3);
-    border-radius: 12px;
-    padding-left: 52px;
-}
-
-.map__card-header {
-    font-family: Playfair Display;
     font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 48px;
-    display: flex;
-    align-items: center;
-    color: #AE7C78;
-    margin-top: 40px;
-    margin-bottom: 42.06px;
-
+}
+.map__card-400 {
+    font-size: 16px;
+    font-weight: 400;
+    
+}
+.map__card-text a {
+    text-decoration: none;
+    color:#AE7C78;
+}
+.map__card-500 {
+    font-weight: 500;
 }
 
 .map__card-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.map__card-text a {
-    text-decoration: none;
-}
-
-.map__card-400,
-.map__card-500 {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
-    width: 243px;
-    color: var(--rose);
-}
-
-.map__card-500 {
-    font-weight: 500;
-    margin-top: 15px;
-    margin-bottom: 30px;
+    list-style: none;
 }
 
 .footer {
-    background-color: var(--rose);
-    width: 100%;
-    height: 97px;
-
-}
-
-.footer__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 30px;
-}
-
-.footer__logo {
-    width: 101px;
-}
-
-.footer__nav ul {
-    list-style: none;
-}
-
-.footer__nav {
-
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
     color: #FFFFFF;
-    width: 795px;
-    display: flex;
-    justify-content: space-between;
-
+    background-color: #AE7C78;
+}
+.footer__nav li {
+    list-style: none;
 }
 
-.footer__social {
+.footer__social li {
     list-style: none;
-    width: 100px;
-    display: flex;
-    justify-content: space-between;
 }
