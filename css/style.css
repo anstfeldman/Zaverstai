@@ -24,6 +24,9 @@ header {
     margin-top: 26px;
     margin-bottom: 80px;
 }
+.header__nav {
+    position: relative;
+}
 
 .header__menu {
     display: flex;
@@ -45,10 +48,20 @@ header {
     margin-bottom: 16.8px;
 }
 
+.header__menu-item:nth-child(3) {
+    margin-right: 62px;
+}
+
+.header__menu-item:nth-child(4) {
+    margin-left: 62px;
+}
+
 .header__nav-logo {
     position: absolute;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
+
 }
 
 /*PROMO*/
@@ -101,6 +114,7 @@ header {
     height: 80px;
     background: #D89999;
     border-radius: 40px;
+    padding: 10px;
 
 
 }
@@ -125,13 +139,23 @@ header {
 }
 
 .promo__adv {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
 
 }
 
 .promo__adv_item {
     display: flex;
+    
+}
+
+.promo__adv_item:nth-child(1) {
+    margin-right: 58px;
+}
+
+.promo__adv_item:nth-child(2) {
+    margin-right: 43px;
 }
 
 .promo__adv_text {
@@ -234,6 +258,8 @@ header {
     color: #FFFFFF;
     margin-top: 64px;
     border: none;
+    padding: 10px;
+
 }
 
 .popular__card {
@@ -243,10 +269,23 @@ header {
 
 .popular__card-arrows {
     margin-top: 24px;
+    display: flex;
+    
+    
 }
 
-.popular__card-arrleft {
-    margin-right: 20px;
+.popular__arr-left, 
+.popular__arr-right {
+    border: none;
+    outline: none;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+.popular__arr-left {
+    margin-right: 10px;
+}
+.popular__arr-right {
+    margin-left: 10px;
 }
 
 
@@ -254,20 +293,29 @@ header {
 /*CATALOGUE*/
 
 .catalogue {
-
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 19px;
     margin-bottom: 80px;
 }
 
 .catalogue__card {
-    position: relative;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 387px;
+    min-height: 442px;
+    background-image: linear-gradient(rgba(174, 124, 120, 0.6), rgba(174, 124, 120, 0.6)), url('../img/wedding.jpeg');
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.catalogue__card a {
+    text-decoration: none;
 }
 
 .catalogue__card-header {
-    position: absolute;
-    top: 183px;
     font-family: 'Playfair Display', 'Times New Roman', serif;
     font-style: normal;
     font-weight: bold;
@@ -276,36 +324,18 @@ header {
     text-align: center;
     letter-spacing: 0.02em;
     color: #FFFFFF;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
 }
 
 .catalogue__card-descr {
-    position: absolute;
-    top: 239px;
+    margin-top: 8px;
     font-family: 'Montserrat', 'Arial', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 20px;
     color: #FFFFFF;
-
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
+    text-align: center;
 }
-
-.catalogue__card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 442px;
-    background: rgba(174, 124, 120, 0.6);
-    border-radius: 10px;
-}
-
 
 /*DISCOUNT*/
 
@@ -348,7 +378,6 @@ header {
 /*FEATURE*/
 
 .feature {
-
     margin-bottom: 80px;
 }
 
@@ -364,8 +393,9 @@ header {
 }
 
 .feature__wrapper {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 285px);
+    gap: 20px;
     margin-top: 36px;
 }
 
@@ -385,13 +415,9 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 20px;
     width: 285px;
-}
+} 
 
-.feature-item:last-child {
-    margin-right: 0;
-}
 
 .feature__item-descr {
     font-family: 'Montserrat', 'Arial', sans-serif;
@@ -443,9 +469,15 @@ header {
 .news__social {
     margin-top: 40px;
     display: flex;
-    justify-content: space-between;
     width: 96.76px;
     list-style: none;
+}
+
+.news__social li {
+    margin-right: 20px;
+}
+.news__social li:last-child {
+    margin-right: 0;
 }
 
 .news__images {
@@ -480,8 +512,9 @@ header {
 }
 
 .reviews__wrapper {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 106px;
 
 }
 
@@ -520,22 +553,24 @@ header {
 
     position: relative;
     margin-bottom: 0;
+    min-height: 645px;
 }
 
 .contacts__map {
-    width: 100%;
-}
-
-.contacts__card {
     position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+.contacts .container {
+    padding-top: 52px;
+}
+.contacts__card {
     width: 386px;
-    height: 520px;
-    left: 222px;
-    top: 52px;
+    min-height: 520px;
     background: #F7FAFC;
     box-shadow: 0px 4px 40px rgba(217, 217, 217, 0.3);
     border-radius: 12px;
-    padding-left: 52px;
+    padding: 40px 20px 20px 52px;
 }
 
 .contacts__header {
@@ -547,7 +582,6 @@ header {
     display: flex;
     align-items: center;
     color: #AE7C78;
-    margin-top: 40px;
     margin-bottom: 42.06px;
 
 }
@@ -614,6 +648,7 @@ header {
 .footer__menu li {
     margin-right: 68px;
 }
+
 .footer__menu li:last-child {
     margin-right: 0;
 }
@@ -621,6 +656,12 @@ header {
 .footer__social {
     list-style: none;
     display: flex;
-    justify-content: space-between;
     width: 97px;
+}
+.footer__social li {
+    margin-right: 20px;
+}
+
+.footer__social li:last-child {
+    margin-right: 0;
 }
